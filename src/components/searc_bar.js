@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
 class SearchBar extends Component {
+
     constructor(props) {
         super(props);
         this.state = {
@@ -17,9 +18,13 @@ class SearchBar extends Component {
     }
 
     render() {
+        var mar={
+            marginTop:"20px",
+            marginBottom:"20px"
+        };
         return (
-            <div className="search-bar">
-                <input value={this.state.term} onChange={(event) => this.onInputchange(event.target.value)}/>
+            <div style={mar}>
+                <input placeholder={"Search"}  className="form-control bg-transparent mr-sm-2 " value={this.state.term} onChange={(event) => this.onInputchange(event.target.value)}/>
             </div>
         );
     }
