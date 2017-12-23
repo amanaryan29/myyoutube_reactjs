@@ -6,7 +6,7 @@ class SearchBar extends Component {
         super(props);
         this.state = {
             term: ''
-        }
+        };
         props.onChangeSearchTerm(this.state.term);
 
     }
@@ -18,16 +18,17 @@ class SearchBar extends Component {
     }
 
     render() {
-        var mar={
-            marginTop:"20px",
-            marginBottom:"20px"
+        let mar = {
+            marginTop: "20px",
+            marginBottom: "20px"
         };
         return (
             <div style={mar}>
-                <input placeholder={"Search"}  className="form-control bg-transparent mr-sm-2 " value={this.state.term} onChange={(event) => this.onInputchange(event.target.value)}/>
+                <input placeholder={"Search"} className="form-control bg-transparent mr-sm-2 " value={this.state.term}
+                       onChange={(event) => this.onInputchange(event.target.value)}/>
             </div>
         );
-    }
-}
+    };
+};
 
 export default SearchBar;
